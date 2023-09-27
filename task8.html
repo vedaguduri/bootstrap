@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>JS Task-2</title>
+        <style>
+            body{
+                margin-left: 50px;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+
+        Enter the string: 
+        <input type="text" id="word"><br><br>
+        <button onclick="fun()">Sort</button><br><br>
+        Output: <span id="output"></span>
+
+        <script>
+            function fun()
+            {
+                function sorting(x) {
+                     let sorted = x.split("").sort().join("");
+                     return sorted;
+                }
+                
+                let initialword = document.getElementById("word").value.toLowerCase();
+                document.getElementById("output").innerText = sorting(initialword);
+            }
+        </script>
+    </body>
+</html>
